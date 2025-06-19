@@ -8,6 +8,7 @@ public class Bloc {
 
     public static final int NBRE_DEMI_JOURS_SEMAINE = 10;
 
+    //MR Les deux attibuts ci-dessous doivent être final
     private String nom;
     private ModuleInfo[] modules;
 
@@ -48,11 +49,14 @@ public class Bloc {
     public void afficherHoraire() {
         int jour = 0;
 
+        //MR On aurait pu faire un saut de deux pour passer de 0 à 2 à 4 à 6 et 8
         for (int i = 0; i < modules.length; i++) {
 
             System.out.println(DayOfWeek.values()[jour++].getDisplayName(TextStyle.FULL, Locale.FRANCE));
 
+            //MR Le matin est i
             System.out.println("    matin      : " + modules[i++].toString());
+            //MR l'après-midi est i+1 et pas i++ car sinon on modifie le i
             System.out.println("    après-midi : " + modules[i].toString());
 
         }

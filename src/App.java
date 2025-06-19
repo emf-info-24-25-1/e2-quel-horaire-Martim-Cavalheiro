@@ -27,6 +27,7 @@ public class App {
 
         do {
             ServiceFormationMaitres.attrivuerModules(profs, modules1ere);
+            //MR ici la méthode est lancée deux fois, il faudrait récupérer le boolean et l'utiliser dans le while
             ServiceFormationMaitres.toutModulesCouverts(profs, modules1ere);
 
         } while (!ServiceFormationMaitres.toutModulesCouverts(profs, modules1ere));

@@ -3,7 +3,7 @@ package models;
 public class Horaire {
 
     public static final int NBRE_DE_BLOCS = 6;
-
+    //MR peut-être mis en final
     private Bloc[] blocs;
 
     public Horaire() {
@@ -28,6 +28,7 @@ public class Horaire {
             for (int j = 0; j < profs.length; j++) {
 
                 if (profs[j].enseigneCeModule(modules[i].getNom())) { // Ici on deverai donné le Prof au module.
+                    //MR Ici il faut plutôt dire au module que le prof va faire ce module
                     profs[j].ajouterModuleEnseigne(modules[i]);
                     profPeutEnseigner = true;
                     break;
@@ -62,6 +63,7 @@ public class Horaire {
 
     public Bloc moduleDansQuelBloc(ModuleInfo module) {
 
+        //MR le retour par défaut n'est pas un bloc null, mais null
         Bloc retour = new Bloc(null);
 
         for (int i = 0; i < blocs.length; i++) {

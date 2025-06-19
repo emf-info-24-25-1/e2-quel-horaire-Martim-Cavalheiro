@@ -8,6 +8,7 @@ public class ServiceFormationMaitres {
     public static void attrivuerModules(Professeur[] professeurs, ModuleInfo[] modules) {
 
         for (int i = 0; i < professeurs.length; i++) {
+            //MR Doublon de code, mais bonne compréhension
             int nbre = (int) (Math.random() * ((modules.length -1) - 0 + 1)) + 0;
 
             if (professeurs[i].enseigneCeModule(modules[nbre].getNom())) {
@@ -26,6 +27,7 @@ public class ServiceFormationMaitres {
 
         for (int i = 0; i < modules.length; i++) {
             for (int j = 0; j < profs.length; j++) {
+                //MR C'est l'inverse il faut voir si le module n'est enseigné par personne
                 if (!profs[j].enseigneCeModule(modules[i].getNom())) {
                     profEnseigneModule = false;
                     break;

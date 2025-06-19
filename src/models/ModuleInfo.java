@@ -2,6 +2,7 @@ package models;
 
 public class ModuleInfo {
 
+    //MR Manque le final
     private String nom;
     private Professeur professeur;
 

@@ -1,7 +1,7 @@
 package models;
 
 public class Professeur {
-
+    //MR Manque les finals sur les deux premiers attributs
     private String nom;
     private String prenom;
     private ModuleInfo[] modulesEnseignes;
@@ -33,6 +33,7 @@ public class Professeur {
             ajoutModule[j++] = modulesEnseignes[i];
         }
 
+        //MR Attention le j++ se fait après donc il ne sera pas sur la bonne cellule du tableau
         ajoutModule[j++] = module;
 
         modulesEnseignes = ajoutModule;
@@ -42,6 +43,7 @@ public class Professeur {
 
         ModuleInfo[] videModule = new ModuleInfo[0];
 
+        //MR Ce for n'est pas nécessaire car on ne réutilise plus moduleEnseignes
         for (int i = 0; i < modulesEnseignes.length; i++) {
             modulesEnseignes[i] = null;
         }
